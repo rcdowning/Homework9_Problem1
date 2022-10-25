@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -18,11 +18,13 @@ int main() {
   }
 
   // print matrix
-  cout << "The values of the matrix are: " << endl;
-  for(int r = 0; r < N_ROWS; r++){  
-    for (int c = 0; c < N_COLS; c++){
-      cout << gradeMatrix[r][c];
-      
-    }
+  cout << "The values of the matrix are: " << endl; 
+  for (int r = 0; r < N_ROWS; r++) {
+    for (int c = 0; c < N_COLS; c++)
+      cout << setw(6) << gradeMatrix[r][c] << " ";
+
+    cout << endl;
   }
+  
+
 }
